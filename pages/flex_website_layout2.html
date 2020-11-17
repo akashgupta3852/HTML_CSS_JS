@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Website Layout - 2</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .col1 {
+            background: #D7E8D4;
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .col2 {
+            display: flex;
+            flex-direction: column;
+            flex: 5;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content>article {
+            flex: 3;
+            min-height: 60vh;
+        }
+
+        .content>aside {
+            background: beige;
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        header,
+        footer {
+            background: yellowgreen;
+            height: 20vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        header{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        header,
+        footer,
+        article,
+        nav,
+        aside {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="col1">Navigation Bars</nav>
+    <div class="col2">
+        <header>HEADER-Sample Flexbox Example</header>
+        <main class="content">
+            <article>
+                <div class="item">
+                    <h2>First Article</h2>
+                    <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
+                </div>
+                <div class="item">
+                    <h2>Second Article</h2>
+                    <p>Holisticly predominate extensible testing procedures for reliable supply chains</p>
+                </div>
+                <div class="item">
+                    <h2>Third Article</h2>
+                    <p>Completely synergize resource taxing relationships via premier niche markets.</p>
+                    <p>Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
+                </div>
+            </article>
+            <aside>Right Side Bar</aside>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
