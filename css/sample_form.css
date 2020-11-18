@@ -54,3 +54,29 @@ error-output {
     font-style: italic;
     color: red;
 }
+
+@media only screen and (max-width: 360px) {
+    h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    label, input, button, .salary-output {
+        font-size: 10px;
+        line-height: 1;
+    }
+
+    label {
+        text-align: right;
+        width: 60%;
+        margin-right: 2%;
+    }
+
+    input {
+        flex: auto;
+    }
+
+    error-output {
+        font-size: 7px;
+    }
+}
