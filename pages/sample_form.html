@@ -18,11 +18,12 @@
         <div>
             <label for = "pwd">password input type: </label>
             <input type="password" id="pwd" name="pwd" required>
-            <error-output class="pwd-error" for="pwd"></output>
+            <error-output class="pwd-error" for="pwd"></error-output>
         </div>
         <div>
             <label for = "email">email input type: </label>
             <input type="email" id="email" name="email">
+            <error-output class="email-error" for="email"></error-output>
         </div>
         <div>
             <label for = "url">url input type: </label>
@@ -73,6 +74,16 @@
                 pwdError.textContent = "";
             else
                 pwdError.textContent = "Password is incorrect"; 
+        });
+
+        const email = document.querySelector('#email');
+        const emailError = document.querySelector('.email-error');
+        email.addEventListener('input', function() {
+            let emailRegex = RegExp("^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?$");
+            if(emailRegex.test(email.value))
+                emailError.textContent = "";
+            else
+                emailError.textContent = "Email is incorrect"; 
         });
 
         const salary = document.querySelector('#salary');
